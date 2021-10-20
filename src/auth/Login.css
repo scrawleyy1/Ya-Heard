@@ -1,0 +1,20 @@
+.dialog {
+    min-width: 15rem;
+    min-height: 5rem;
+    
+  }
+  
+  .container--login{
+    text-align: center;
+    margin-top: 300px;
+   margin-left: 600px;
+    color: white;
+  }
+  
+  .link--register {
+   margin-left: 255px;
+    margin-top: 20px;
+    background-color: white;
+    width: 150px;
+    border-radius: 10px;
+  }
