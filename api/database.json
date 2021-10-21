@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "sydney@gmail.com",
+      "name": "Sydney Crawley",
+      "id": 1
+    },
+    {
+      "email": "skeef@me.com",
+      "name": "smino keef",
+      "id": 2
+    }
+  ],
+  "concerts": [],
+  "reviews": []
+}
