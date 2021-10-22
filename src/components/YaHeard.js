@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Redirect  } from 'react-router';
-// import { ApplicationViews } from "./ApplicationViews"
+import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "../auth/Login";
 import { NavBar } from './NavBar';
 import { Register } from '../auth/Register';
@@ -14,6 +14,7 @@ export const YaHeard = () => {
           return (
             <>
               <NavBar />
+              <ApplicationViews />
             </>
           )
         } else {
