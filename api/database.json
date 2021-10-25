@@ -4,37 +4,23 @@
       "email": "sydney@gmail.com",
       "name": "Sydney Crawley",
       "id": 1
-    },
-    {
-      "email": "focean@me.com",
-      "name": "Frank Ocean",
-      "id": 2
     }
   ],
   "concerts": [
     {
+      "id": 1,
       "name": "Frank Ocean",
-      "date": "2022-04-20",
-      "location": "LosAngeles, CA",
-      "status": true,
-      "userId": 1,
-      "id": 1
+      "date": "2022-04-21",
+      "status": false,
+      "userId": 1
     },
     {
-      "name": "James Blake",
-      "date": "2021-10-23",
-      "location": "Atlanta, GA",
+      "name": "Sza",
+      "date": "2021-10-30",
+      "location": "Nashville, TN",
       "status": false,
       "userId": 1,
       "id": 2
-    },
-    {
-      "name": "Frank Ocean",
-      "date": "2022-04-20",
-      "location": "LosAngeles, CA",
-      "status": false,
-      "userId": 2,
-      "id": 3
     }
   ],
   "reviews": []
