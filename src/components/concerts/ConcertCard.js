@@ -18,7 +18,7 @@ export const ConcertCard = ({ concert, reload, handleDeleteConcert }) => {
             <h3>Concert: {(concert.name)}</h3>
             <p>Date: {concert.date}</p>
             <p>Location: {concert.location}</p>
-            {concert.userId === currentUser && <div className="complete"><label for="complete">complete?
+            {concert.userId === currentUser && <div className="complete"><label htmlFor="complete">complete?
             <input onChange={handleCheckboxComplete}type="checkbox" name="complete" id="complete"></input>
             </label></div> }
             {concert.userId === currentUser && <div className="buttons">
