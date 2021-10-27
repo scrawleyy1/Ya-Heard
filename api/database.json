@@ -53,7 +53,7 @@
       "name": "EarthGang",
       "date": "2020-02-27",
       "location": "Atlanta, GA",
-      "status": false,
+      "status": true,
       "userId": 1,
       "id": 6
     },
@@ -61,7 +61,7 @@
       "name": "James Blake",
       "date": "2021-10-15",
       "location": "Atlanta, GA",
-      "status": false,
+      "status": true,
       "userId": 1,
       "id": 7
     },

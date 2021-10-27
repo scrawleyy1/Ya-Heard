@@ -8,6 +8,15 @@ export const ConcertList = () => {
     const history = useHistory();
     const { type } = useParams();
 
+    const getConcerts = () => {
+        return getAllConcerts().then(concertsFromAPI => {
+            setConcerts(concertsFromAPI)
+        })
+    }
+
+    const reload = () => {
+        getConcerts()
+    }
 
 
     //Function deletes a single concert and re-renders to display concerts still in API
@@ -34,19 +43,25 @@ export const ConcertList = () => {
     });
 
 
-    //After the data comes back from the API we use setConcerts function to update state
     //Clean up function
+    // useEffect(() => {
+        //     let isMounted = true
+        //     getAllConcerts().then((concertsFromAPI) => {
+            //         if (isMounted) {
+                //                 setConcerts(concertsFromAPI);
+                //         }
+                //         else {
+                    //             isMounted = false
+                    //         }
+                    //     })
+                    // }, []);
+                    
+                 
+                 
+   //After the data comes back from the API we use setConcerts function to update state
     useEffect(() => {
-        let isMounted = true
-        getAllConcerts().then((concertsFromAPI) => {
-            if (isMounted) {
-                    setConcerts(concertsFromAPI);
-            }
-            else {
-                isMounted = false
-            }
-        })
-    }, [concerts]);
+        getConcerts();
+    }, []);
 
     //Finally we use .map() to "loop over" the concerts array to show a list of concert cards
     //return shows a button to add a concert, displays the concert cards in a list, and shows a button to delete concerts
@@ -55,9 +70,9 @@ export const ConcertList = () => {
         <div className="card">
             <button type="button" onClick={() => { history.push("/concerts/create") }}>Add Concert</button>
             {type === "upcoming" ? upcomingConcerts.map(concert =>
-                <ConcertCard key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}
+                <ConcertCard reload={reload} key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}
             {type === "past" ? pastConcerts.map(concert =>
-                <ConcertCard key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}
+                <ConcertCard reload={reload} key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}
         </div>
     );
 }
