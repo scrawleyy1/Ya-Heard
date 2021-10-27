@@ -8,6 +8,7 @@ export const ConcertEditForm = () => {
 
     const {concertId} = useParams();
     const history = useHistory();
+    //prepares data to be changed
 
     const handleFieldChange = event => {
         const stateToChange = { ...concert };
@@ -15,6 +16,8 @@ export const ConcertEditForm = () => {
         setConcert(stateToChange);
     };
 
+  
+    //processes changed data
     const updateExistingConcert = event => {
         event.preventDefault()
         setIsLoading(true);
@@ -31,6 +34,8 @@ export const ConcertEditForm = () => {
     .then(() => history.push("/concerts")
     )
 }
+
+    //takes the new info and updates the previous data to the new data
     useEffect(() => {
     getConcertById(concertId)
      .then(concert => {
@@ -39,6 +44,7 @@ export const ConcertEditForm = () => {
         });
     }, [concertId]);
 
+    //return displays the edit form so a concert can be edited
     return (
      <form>
         <fieldset>

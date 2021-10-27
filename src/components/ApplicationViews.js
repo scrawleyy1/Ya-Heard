@@ -30,6 +30,10 @@ export const ApplicationViews = () => {
         {isAuthenticated ? <ConcertList /> : <Redirect to="/login" />}
         </Route>
 
+        <Route exact path="/concerts/:type">
+        {isAuthenticated ? <ConcertList /> : <Redirect to="/login" />}
+        </Route>
+
         <Route exact path="/concerts/create">
           <ConcertForm />
         </Route>
