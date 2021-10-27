@@ -3,6 +3,8 @@ import { useHistory } from "react-router";
 import { addConcert } from "../modules/ConcertManager";
 
 export const ConcertForm = () => {
+
+    //useState will hold the event name, date, and location
     const [concert, setConcert] = useState({
         name: "",
         date: "",
@@ -11,6 +13,8 @@ export const ConcertForm = () => {
     });
 
     const history = useHistory();
+    //makes a copy of object and allows us to add our concert, date, and location
+
 
     const handleControlledInputChange = (event) => {
         const newConcert = { ...concert }
@@ -21,15 +25,19 @@ export const ConcertForm = () => {
         }
         newConcert[event.target.id] = selectedVal
         newConcert.userId = currentUser
+        // update state
         setConcert(newConcert)
     }
 
+
+    //saves the concert and redirects user back to concert page to see concerts
     const handleClickSaveConcert = (event) => {
-        event.preventDefault()
+        event.preventDefault() //prevents the browser from submitting the form
         addConcert(concert)
             .then(() => history.push("/"))
     }
 
+    //return gives us the concert form and allows user to add a concert
     return (
         <form>
             <h2>New Concert</h2>

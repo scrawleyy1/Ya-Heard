@@ -27,7 +27,7 @@ export const addConcert = (newConcert) => {
 }
 
 export const concertComplete = (completeConcert) => {
-	completeConcert.status = true
+    completeConcert.status = true
 	  return fetch(`${remoteURL}/${completeConcert.id}`, {
 		  method: "PATCH",
 		  headers: {

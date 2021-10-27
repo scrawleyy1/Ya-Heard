@@ -12,6 +12,7 @@ export const ConcertCard = ({ concert, reload, handleDeleteConcert }) => {
 
     const currentUser = parseInt(sessionStorage.getItem("yaheard_user"))
 
+    //return displays concert card to the DOM
     return (
 
         <div className="card">
