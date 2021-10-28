@@ -22,7 +22,6 @@ export const ConcertList = () => {
 
     //Function deletes a single concert and re-renders to display concerts still in API
     const handleDeleteConcert = (id) => {
-        console.log(id)
         deleteConcert(id)
             .then(() => getAllConcerts().then(setConcerts));
     };
