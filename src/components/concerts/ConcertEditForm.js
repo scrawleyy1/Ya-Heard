@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { getConcertById, update } from "../modules/ConcertManager";
 import { useHistory, useParams } from "react-router";
+// import "./Concert.css"
 
 export const ConcertEditForm = () => {
     const [concert, setConcert] = useState({ name:"", date:"", location:""});
@@ -46,9 +47,10 @@ export const ConcertEditForm = () => {
 
     //return displays the edit form so a concert can be edited
     return (
-     <form>
+     <form className="concerteditform">
         <fieldset>
           <div>
+            <label htmlFor="name">Concert Name</label>
             <input
               type="text"
               required
@@ -56,8 +58,8 @@ export const ConcertEditForm = () => {
               id="name"
               value={concert.name}
             />
-            <label htmlFor="name">Concert Name</label>
 
+            <label htmlFor="date">Concert Date</label>
             <input
               type="date"
               required
@@ -65,8 +67,8 @@ export const ConcertEditForm = () => {
               id="date"
               value={concert.date}
             />
-            <label htmlFor="date">Concert Date</label>
 
+            <label htmlFor="name">Concert Location</label>
             <input
               type="text"
               required
@@ -74,11 +76,10 @@ export const ConcertEditForm = () => {
               id="location"
               value={concert.location}
             />
-            <label htmlFor="name">Concert Location</label>
           </div>
           <div>
             <button
-              type="button" disabled={isLoading}
+              className="submitbutton" type="button" disabled={isLoading}
               onClick={updateExistingConcert}
             >Submit</button>
           </div>

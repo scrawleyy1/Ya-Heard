@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { concertComplete } from "../modules/ConcertManager";
-// import "./Concert.css"
+import "./Concert.css"
 
 export const ConcertCard = ({ concert, reload, handleDeleteConcert }) => {
     const history = useHistory();
@@ -22,9 +22,9 @@ export const ConcertCard = ({ concert, reload, handleDeleteConcert }) => {
             {concert.userId === currentUser && <div className="complete"><label htmlFor="complete">complete?
             <input onChange={handleCheckboxComplete}type="checkbox" name="complete" id="complete"></input>
             </label></div> }
-            {concert.userId === currentUser && <div className="buttons">
-                <button type="button" onClick={() => handleDeleteConcert(concert.id)}>Delete</button>
-                <button type="button" onClick={() => history.push(`/concerts/${concert.id}/edit`)}>Edit</button>
+            {concert.userId === currentUser && <div>
+                <button className="editbutton" type="button" onClick={() => history.push(`/concerts/${concert.id}/edit`)}>Edit</button>
+                <button className="deletebutton" type="button" onClick={() => handleDeleteConcert(concert.id)}>Delete</button>
                 </div>}
         </div>
     );

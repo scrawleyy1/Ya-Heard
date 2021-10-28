@@ -1,28 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
+import "./NavBar.css"
 
 export const NavBar = () => {
     const history = useHistory();
 
     return (
-        <nav>
+        <nav className="navbar">
         <ul>
 
         <li className="nav">
-          <Link className="nav__link" to="/">Home</Link>
+          <Link className="nav" to="/">Home</Link>
         </li>
 
         <li className="nav">
-          <Link className="nav__link" to="/concerts/upcoming">My Upcoming Concerts</Link>
+          <Link className="nav" to="/concerts/upcoming">My Upcoming Concerts</Link>
         </li>
 
         <li className="nav">
-          <Link className="nav__link" to="/concerts/past">My Past Concerts</Link>
+          <Link className="nav" to="/concerts/past">My Past Concerts</Link>
         </li>
 
         <li className="nav">
-          <button className="nav__button" onClick={() => {
+          <button className="logoutbutton" onClick={() => {
             sessionStorage.removeItem("yaheard_user");
             history.push("/login")
         }}>Logout</button>

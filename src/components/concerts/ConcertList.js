@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getAllConcerts, deleteConcert } from "../modules/ConcertManager";
 import { ConcertCard } from "./ConcertCard";
 import { useHistory, useParams } from "react-router";
+import "./Concert.css"
 
 export const ConcertList = () => {
     const [concerts, setConcerts] = useState([]);
@@ -68,7 +69,7 @@ export const ConcertList = () => {
 
     return (
         <div className="card">
-            <button type="button" onClick={() => { history.push("/concerts/create") }}>Add Concert</button>
+            <button className="addconcertbutton" type="button" onClick={() => { history.push("/concerts/create") }}>Add Concert</button>
             {type === "upcoming" ? upcomingConcerts.map(concert =>
                 <ConcertCard reload={reload} key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}
             {type === "past" ? pastConcerts.map(concert =>

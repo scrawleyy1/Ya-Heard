@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background-color: black;
+}
+
+.nav {
+    text-decoration: none;
+    list-style-type: none;
+    white-space: nowrap;
+    margin: auto 30px;
+    margin-right: 0px;
+    font-weight: 400;
+    color: #3BB764;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.logoutbutton {
+    font-family: 'Times New Roman', Times, serif;
+	color: #3BB764;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px black solid;
+	padding: 10px 18px;
+	align-items: center;
+    margin-top:15px;
+    margin-left: 340px;
+}

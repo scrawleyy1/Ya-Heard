@@ -56,15 +56,15 @@ export const Register = () => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="container--register"style={{ textAlign: "center" }}>
 
-            <dialog className="dialog dialog--password" open={conflictDialog}>
+            <dialog open={conflictDialog}>
                 <div>Account with that email address already exists</div>
-                <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
+                <button onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
-
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Register for Ya Heard!</h1>
+            <section className="register">
+            <form className="form" onSubmit={handleRegister}>
+                <h1>Register for Ya Heard!</h1>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>
                     <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
@@ -78,9 +78,10 @@ export const Register = () => {
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
                 <fieldset>
-                    <button type="submit"> Sign Up! </button>
+                    <button className="signupbutton" type="submit"> Sign Up! </button>
                 </fieldset>
             </form>
+            </section>
         </main>
     )
 }
