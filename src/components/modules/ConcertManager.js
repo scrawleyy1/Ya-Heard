@@ -6,7 +6,7 @@ export const getConcertById = (concertId) => {
 }
 
 export const getAllConcerts = () => {
-    return fetch(`${remoteURL}`)
+    return fetch(`${remoteURL}?_sort=date`)
     .then(res => res.json())
 }
 
