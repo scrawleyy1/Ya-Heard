@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router";
 // import "./Concert.css"
 
 export const ConcertEditForm = () => {
-    const [concert, setConcert] = useState({ name:"", date:"", location:""});
+    const [concert, setConcert] = useState({ name:"", date:"", location:"", status: false, userId: parseInt(sessionStorage.getItem("yaheard_user")) });
     const [isLoading, setIsLoading] = useState(false);
 
     const {concertId} = useParams();
@@ -27,6 +27,7 @@ export const ConcertEditForm = () => {
         id: concertId,
         name: concert.name,
         date: concert.date,
+        location: concert.location,
         status: false,
         userId: parseInt(sessionStorage.getItem("yaheard_user"))
     };

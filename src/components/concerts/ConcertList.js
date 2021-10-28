@@ -42,20 +42,6 @@ export const ConcertList = () => {
         const date = new Date(a.date);
         return (date >= endDate);
     });
-
-
-    //Clean up function
-    // useEffect(() => {
-        //     let isMounted = true
-        //     getAllConcerts().then((concertsFromAPI) => {
-            //         if (isMounted) {
-                //                 setConcerts(concertsFromAPI);
-                //         }
-                //         else {
-                    //             isMounted = false
-                    //         }
-                    //     })
-                    // }, []);
                     
                  
                  
