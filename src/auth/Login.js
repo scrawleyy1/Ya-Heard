@@ -38,34 +38,34 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
-            <dialog className="dialog dialog--auth" open={existDialog}>
+        <main className="login">
+            <dialog open={existDialog}>
                 <div>User does not exist</div>
-                <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
+                <button onClick={e => setExistDialog(false)}>Close</button>
             </dialog>
-            <section>
-                <form className="form--login" onSubmit={handleLogin}>
+            <section className="main">
+                <form className="topnav" onSubmit={handleLogin}>
                     <h1>Have Ya Heard?</h1>
-                    <h2>Please sign in</h2>
+                    <h4>Please sign in!</h4>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
                             id="email"
-                            className="form-control"
+                            className="email"
                             placeholder="Email address"
                             required autoFocus
                             value={loginUser.email}
                             onChange={handleInputChange} />
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign in
+                    <fieldset className="loginbutton">
+                        <button className= "signinbutton" type="submit">
+                            Sign in!
+                        </button>
+                        <button className= "registerbutton" type="register">
+                        <Link to="/register">Don't have an account? Register Here!</Link>
                         </button>
                     </fieldset>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Register for an account</Link>
             </section>
         </main>
     )

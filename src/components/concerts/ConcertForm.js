@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { addConcert } from "../modules/ConcertManager";
+import "./Concert.css"
 
 export const ConcertForm = () => {
 
@@ -39,7 +40,7 @@ export const ConcertForm = () => {
 
     //return gives us the concert form and allows user to add a concert
     return (
-        <form>
+        <form className="concertform">
             <h2>New Concert</h2>
             <fieldset>
                 <div>
@@ -59,7 +60,7 @@ export const ConcertForm = () => {
                     <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus placeholder="Concert Location" value={concert.location} />
                 </div>
             </fieldset>
-            <button onClick={handleClickSaveConcert}>Save Concert</button>
+            <button className="savebutton" onClick={handleClickSaveConcert}>Save Concert</button>
         </form>
     )
 
