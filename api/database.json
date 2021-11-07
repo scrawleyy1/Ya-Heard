@@ -29,18 +29,10 @@
       "userId": 1
     },
     {
-      "name": "EarthGang",
-      "date": "2020-02-27",
-      "location": "Atlanta, GA",
-      "status": false,
-      "userId": 1,
-      "id": 5
-    },
-    {
       "name": "James Blake",
       "date": "2021-10-15",
       "location": "Atlanta, GA",
-      "status": false,
+      "status": true,
       "userId": 1,
       "id": 6
     },
@@ -69,12 +61,35 @@
       "id": 9
     },
     {
+      "name": "Jessie Reyez",
+      "date": "2018-11-06",
+      "location": "Nashville, TN",
+      "status": true,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Ariana Grande",
+      "date": "2019-12-05",
+      "location": "Nashville, TN",
+      "status": true,
+      "userId": 1,
+      "id": 12
+    },
+    {
       "name": "Frank Ocean",
-      "date": "2022-04-20",
-      "location": "LosAngeles, CA",
+      "date": "2021-11-10",
+      "location": "Nashville, TN",
       "status": false,
       "userId": 1,
-      "id": 10
+      "id": 13
+    },
+    {
+      "name": "",
+      "date": "",
+      "location": "",
+      "status": false,
+      "id": 14
     }
   ],
   "reviews": []
