@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { getConcertById, update } from "../modules/ConcertManager";
 import { useHistory, useParams } from "react-router";
-// import "./Concert.css"
+import "./Concert.css"
 
 export const ConcertEditForm = () => {
     const [concert, setConcert] = useState({ name:"", date:"", location:"", status: false, userId: parseInt(sessionStorage.getItem("yaheard_user")) });
@@ -50,7 +50,7 @@ export const ConcertEditForm = () => {
     return (
      <form className="concerteditform">
         <fieldset>
-          <div>
+          <h2>Edit Concert</h2>
             <label htmlFor="name">Concert Name</label>
             <input
               type="text"
@@ -59,7 +59,8 @@ export const ConcertEditForm = () => {
               id="name"
               value={concert.name}
             />
-
+            </fieldset>
+            <fieldset>
             <label htmlFor="date">Concert Date</label>
             <input
               type="date"
@@ -68,7 +69,8 @@ export const ConcertEditForm = () => {
               id="date"
               value={concert.date}
             />
-
+            </fieldset>
+            <fieldset>
             <label htmlFor="name">Concert Location</label>
             <input
               type="text"
@@ -77,13 +79,12 @@ export const ConcertEditForm = () => {
               id="location"
               value={concert.location}
             />
-          </div>
-          <div>
+            <div className="submit-wrapper">
             <button
               className="submitbutton" type="button" disabled={isLoading}
               onClick={updateExistingConcert}
             >Submit</button>
-          </div>
+            </div>
         </fieldset>
       </form>
 );

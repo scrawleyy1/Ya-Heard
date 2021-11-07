@@ -11,7 +11,7 @@
     align-items: flex-start;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 160;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: #3BB764;
     border: 1.5px black solid;
 }
@@ -21,7 +21,7 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
+	border: 2px black solid;
 	padding: 10px 18px;
 	align-items: center;
     margin-top:15px;
@@ -33,7 +33,7 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
+	border: 2px black solid;
 	padding: 10px 18px;
 	align-items: center;
     margin-top:15px;
@@ -45,7 +45,7 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
+	border: 2px black solid;
 	padding: 10px 18px;
 	align-items: center;
     margin-top:15px;
@@ -57,11 +57,9 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
-	padding: 10px 18px;
-	align-items: center;
-    margin-top:15px;
-    margin-left: 340px;
+	border: 2px #3BB764 solid;
+    margin: 30px auto 10px;
+    padding: 10px;
 }
 
 .addconcertbutton {
@@ -69,17 +67,31 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
+	border: 2px black solid;
 	padding: 10px 18px;
 	align-items: center;
     margin-top:15px;
-    margin-left: 340px;
 }
 
 .concertform {
     background-color: black;
     width: 500px;
-    height: 660px;
+    border-radius: 1.5em;
+    margin-left: auto;
+    margin-right: auto; 
+    color: #3BB764;  
+    font-size: 20px;
+    padding: 20px;
+}
+
+.concertform h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.concerteditform {
+    background-color: black;
+    width: 500px;
     border-radius: 1.5em;
     margin-left: auto;
     margin-right: auto; 
@@ -87,13 +99,30 @@
     font-size: 20px;
 }
 
-.concerteditform {
-    background-color: black;
-    width: 500px;
-    height: 660px;
-    border-radius: 1.5em;
-    margin-left: auto;
-    margin-right: auto; 
-    color: #3BB764;  
-    font-size: 20px;
+.concerteditform h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.center {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    align-items: center;
+}
+
+.submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-list {
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+}
+
+fieldset {
+    border: none;
+    margin: 10px;
 }

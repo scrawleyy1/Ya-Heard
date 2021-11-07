@@ -59,8 +59,10 @@ export const ConcertForm = () => {
                     <label htmlFor="location">Concert Location:</label>
                     <input type="text" id="location" onChange={handleControlledInputChange} required autoFocus placeholder="Concert Location" value={concert.location} />
                 </div>
+                <div className="submit-wrapper">
+            <button className="submitbutton" onClick={handleClickSaveConcert}>Save Concert</button>
+            </div>
             </fieldset>
-            <button className="savebutton" onClick={handleClickSaveConcert}>Save Concert</button>
         </form>
     )
 

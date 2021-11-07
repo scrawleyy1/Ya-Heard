@@ -1,8 +1,13 @@
 .navbar {
     display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     background-color: black;
+    color: #3BB764;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
 }
 
 .nav {
@@ -15,6 +20,11 @@
     color: #3BB764;
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .logoutbutton {
@@ -22,9 +32,34 @@
 	color: #3BB764;
 	font-size: 15px;
 	border-radius: 5px;
-	border: 1px black solid;
-	padding: 10px 18px;
+	border: 2px #3BB764 solid;
 	align-items: center;
-    margin-top:15px;
-    margin-left: 340px;
+    margin-left: 140px;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+li a {
+    color: #3BB764;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500px;
+}
+
+li {
+    float: left;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.navbarlogo {
+    width: 200px;
+    margin-right: 100px;
 }

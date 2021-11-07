@@ -1,5 +1,6 @@
 import React, {  useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import logo from "../images/logo2.png"
 import "./Login.css"
 
 
@@ -45,10 +46,11 @@ export const Login = () => {
             </dialog>
             <section className="main">
                 <form className="topnav" onSubmit={handleLogin}>
-                    <h1>Ya Heard?</h1>
-                    <h4>Please sign in!</h4>
+                    <img className="loginlogo" src={logo} alt="Ya Heard Logo"/>
+                    <h2>Please sign in!</h2>
+                    <div className="signInWrapper">
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label htmlFor="inputEmail"> Email address: </label>
                         <input type="email"
                             id="email"
                             className="email"
@@ -61,10 +63,11 @@ export const Login = () => {
                         <button className= "signinbutton" type="submit">
                             Sign in!
                         </button>
-                        <button className= "registerbutton" type="register">
+                        <div className= "registerbutton" type="register">
                         <Link to="/register">Don't have an account? Register Here!</Link>
-                        </button>
+                        </div>
                     </fieldset>
+                    </div>
                 </form>
             </section>
         </main>

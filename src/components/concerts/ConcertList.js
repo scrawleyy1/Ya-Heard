@@ -53,7 +53,8 @@ export const ConcertList = () => {
     //return shows a button to add a concert, displays the concert cards in a list, and shows a button to delete concerts
 
     return (
-        <div className="card">
+        <div className="card-list">
+            <p>What concert have "Ya Heard" about?</p>
             <button className="addconcertbutton" type="button" onClick={() => { history.push("/concerts/create") }}>Add Concert</button>
             {type === "upcoming" ? upcomingConcerts.map(concert =>
                 <ConcertCard reload={reload} key={concert.id} concert={concert} handleDeleteConcert={handleDeleteConcert} />) : ""}

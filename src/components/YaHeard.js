@@ -4,6 +4,7 @@ import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "../auth/Login";
 import { NavBar } from './NavBar';
 import { Register } from '../auth/Register';
+import "./YaHeard.css"
 
 export const YaHeard = () => {
   return (
