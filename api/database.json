@@ -13,36 +13,60 @@
   ],
   "concerts": [
     {
-      "id": 1,
       "name": "Jessie Reyez",
       "date": "2018-11-06",
       "location": "Nashville, TN",
-      "status": true,
-      "userId": 1
+      "status": false,
+      "userId": 1,
+      "id": 1
     },
     {
-      "id": 4,
+      "name": "Daniel Caesar",
+      "date": "2019-09-11",
+      "location": "Nashville, TN",
+      "status": false,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Masego",
+      "date": "2019-10-13",
+      "location": "Nashville, TN",
+      "status": false,
+      "userId": 1,
+      "id": 3
+    },
+    {
       "name": "Ariana Grande",
       "date": "2019-12-05",
       "location": "Nashville, TN",
-      "status": true,
-      "userId": 1
+      "status": false,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "EarthGang",
+      "date": "2020-02-27",
+      "location": "Atlanta, GA",
+      "status": false,
+      "userId": 1,
+      "id": 5
     },
     {
       "name": "James Blake",
       "date": "2021-10-15",
       "location": "Atlanta, GA",
-      "status": true,
+      "status": false,
       "userId": 1,
       "id": 6
     },
     {
-      "id": 7,
       "name": "Kendrick Lamar",
       "date": "2021-11-12",
-      "location": "LasVegas, NA",
+      "location": "Las Vegas, NV",
       "status": false,
-      "userId": 1
+      "userId": 1,
+      "id": 7
     },
     {
       "name": "Doja Cat",
@@ -53,43 +77,28 @@
       "id": 8
     },
     {
-      "name": "Tyler the Creator",
-      "date": "2021-11-14",
+      "name": "Travis Scott",
+      "date": "2021-11-13",
       "location": "Las Vegas, NV",
       "status": false,
       "userId": 1,
       "id": 9
     },
     {
-      "name": "Jessie Reyez",
-      "date": "2018-11-06",
-      "location": "Nashville, TN",
-      "status": true,
+      "name": "Tyler the Creator",
+      "date": "2021-11-14",
+      "location": "Las Vegas, NV",
+      "status": false,
       "userId": 1,
-      "id": 11
-    },
-    {
-      "name": "Ariana Grande",
-      "date": "2019-12-05",
-      "location": "Nashville, TN",
-      "status": true,
-      "userId": 1,
-      "id": 12
+      "id": 10
     },
     {
       "name": "Frank Ocean",
-      "date": "2021-11-10",
-      "location": "Nashville, TN",
+      "date": "2022-04-20",
+      "location": "LosAngeles, CA",
       "status": false,
       "userId": 1,
-      "id": 13
-    },
-    {
-      "name": "",
-      "date": "",
-      "location": "",
-      "status": false,
-      "id": 14
+      "id": 11
     }
   ],
   "reviews": []
